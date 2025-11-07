@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 - Ler o programa e trocar valores</title>
+</head>
+<body>
+    <h1>Exercício 7: Ler o programa e trocar valores</h1>
+    <script>
+        //Escreva um programa que leia dois números inteiros e troque os seus valores, ou seja,
+        //o primeiro deve ficar com o valor do segundo e vice-versa.
+
+        let numero1 = parseInt(prompt("Digite o primeiro número"))
+        let numero2 = parseInt(prompt("Digite o segundo número"))
+        let reserva = 0
+
+        document.write("Antes de trocar os valores são x=" + numero1 + "y=" + numero2 + "<br>")
+
+        reserva = numero1
+        numero1 = numero2
+        numero2 = reserva
+
+        document.write("Depois de trocar os valores são x=" + numero1 + "y=" + numero2)
+    </script>
+</body>
+</html>

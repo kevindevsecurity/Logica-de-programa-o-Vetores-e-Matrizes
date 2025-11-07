@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 35 - Média e Aprovação</title>
+</head>
+<body>
+    <h1>Exercício 35: Média Aritmética e Situação</h1>
+
+    <script>
+        // 35) Escreva um programa que leia três números inteiros e exiba a 
+        // média aritmética. Se a média for maior ou igual a 7, exiba a 
+        // mensagem "Aprovado", caso contrário, exiba a mensagem 
+        // "Reprovado".
+
+        // 1. Solicita os três números
+        // (O exercício pede inteiros, mas usaremos float para as notas)
+        let n1Str = prompt("Digite a primeira nota:");
+        let n2Str = prompt("Digite a segunda nota:");
+        let n3Str = prompt("Digite a terceira nota:");
+
+        // 2. Converte para números decimais
+        let n1 = parseFloat(n1Str);
+        let n2 = parseFloat(n2Str);
+        let n3 = parseFloat(n3Str);
+
+        // 3. Calcula a média aritmética
+        let media = (n1 + n2 + n3) / 3;
+        let situacao = "";
+
+        // 4. Verifica a situação (>= 7 Aprovado)
+        if (media >= 7) {
+            situacao = "Aprovado";
+        } else {
+            situacao = "Reprovado";
+        }
+
+        // 5. Exibe os resultados
+        document.write("<h2>--- Resultado Final ---</h2>");
+        document.write("<p>Notas: " + n1.toFixed(1) + ", " + n2.toFixed(1) + ", " + n3.toFixed(1) + "</p>");
+        document.write("<p>Média: " + media.toFixed(2) + "</p>");
+
+        // Muda a cor da situação
+        if (media >= 7) {
+            document.write("<p style='color: green;'><b>Situação: " + situacao + "</b></p>");
+        } else {
+            document.write("<p style='color: red;'><b>Situação: " + situacao + "</b></p>");
+        }
+    </script>
+</body>
+</html>

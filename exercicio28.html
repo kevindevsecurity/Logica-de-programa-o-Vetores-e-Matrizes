@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 28 - IMC Completo</title>
+</head>
+<body>
+    <h1>Exercício 28: IMC com Classificação</h1>
+
+    <script>
+        // 28) Faça um programa que leia o peso e a altura de uma pessoa e 
+        // exiba o seu Índice de Massa Corporal (IMC) e a sua classificação. 
+        // Considere a tabela de classificação do IMC.
+        
+        // Tabela de Exemplo:
+        // < 18.5: Abaixo do peso
+        // 18.5 - 24.9: Peso normal
+        // 25.0 - 29.9: Sobrepeso
+        // 30.0 - 34.9: Obesidade Grau I
+        // 35.0 - 39.9: Obesidade Grau II
+        // >= 40.0: Obesidade Grau III
+
+        // 1. Solicita o peso e a altura
+        let pesoStr = prompt("Digite seu peso (em kg, ex: 70.5):");
+        let alturaStr = prompt("Digite sua altura (em metros, ex: 1.75):");
+
+        // 2. Converte para números decimais
+        let peso = parseFloat(pesoStr);
+        let altura = parseFloat(alturaStr);
+
+        // 3. Calcula o IMC (Fórmula: Peso / (Altura * Altura))
+        let imc = peso / (altura * altura);
+        let classificacao = "";
+
+        // 4. Verifica a classificação
+        if (imc < 18.5) {
+            classificacao = "Abaixo do peso";
+        } else if (imc >= 18.5 && imc <= 24.9) {
+            classificacao = "Peso normal";
+        } else if (imc >= 25 && imc <= 29.9) {
+            classificacao = "Sobrepeso";
+        } else if (imc >= 30 && imc <= 34.9) {
+            classificacao = "Obesidade Grau I";
+        } else if (imc >= 35 && imc <= 39.9) {
+            classificacao = "Obesidade Grau II";
+        } else { // Se for maior ou igual a 40
+            classificacao = "Obesidade Grau III (Mórbida)";
+        }
+
+        // 5. Exibe os resultados
+        document.write("<h2>--- Resultado do IMC ---</h2>");
+        document.write("<p>Peso: " + peso.toFixed(2) + " kg</p>");
+        document.write("<p>Altura: " + altura.toFixed(2) + " m</p>");
+        document.write("<p><b>IMC: " + imc.toFixed(2) + "</b></p>");
+        document.write("<p><b>Classificação: " + classificacao + "</b></p>");
+    </script>
+</body>
+</html>

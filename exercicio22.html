@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 22 - Bônus Salarial</title>
+</head>
+<body>
+    <h1>Exercício 22: Cálculo de Bônus Salarial</h1>
+
+    <script>
+        // 22) Faça um programa que receba o salário de um funcionário e 
+        // exiba o valor do seu bônus. Se o salário for maior que R$ 2000, o 
+        // bônus é de 10%, caso contrário, é de 5%.
+
+        // 1. Solicita o salário
+        let salarioStr = prompt("Digite o salário do funcionário (R$):");
+        
+        // 2. Converte para número decimal
+        let salario = parseFloat(salarioStr);
+
+        // 3. Declara a variável do bônus
+        let valorBonus = 0;
+        let percentual = "";
+
+        // 4. Verifica a condição do bônus
+        if (salario > 2000) {
+            valorBonus = salario * 0.10; // 10%
+            percentual = "10%";
+        } else {
+            valorBonus = salario * 0.05; // 5%
+            percentual = "5%";
+        }
+
+        // 5. Exibe os resultados
+        document.write("<h2>--- Cálculo do Bônus ---</h2>");
+        document.write("<p>Salário Informado: R$ " + salario.toFixed(2) + "</p>");
+        document.write("<p>Percentual do Bônus: <b>" + percentual + "</b></p>");
+        document.write("<p>Valor do Bônus: <b>R$ " + valorBonus.toFixed(2) + "</b></p>");
+    </script>
+</body>
+</html>

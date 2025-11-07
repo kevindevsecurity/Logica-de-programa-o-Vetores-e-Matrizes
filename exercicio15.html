@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 15 - Aumento Salarial</title>
+</head>
+<body>
+    <h1>Exercício 15: Aumento de Salário (15%)</h1>
+
+    <script>
+        // 15) Crie um programa que leia o salário de um funcionário e calcule 
+        // o novo salário com um aumento de 15%.
+
+        // 1. Solicita o salário atual
+        let salarioAtualStr = prompt("Digite o salário atual do funcionário:");
+
+        // 2. Converte para número decimal
+        let salarioAtual = parseFloat(salarioAtualStr);
+
+        // 3. Calcula o valor do aumento (15% = 0.15)
+        let valorAumento = salarioAtual * 0.15;
+
+        // 4. Calcula o novo salário
+        let novoSalario = salarioAtual + valorAumento;
+
+        // (Alternativa: novoSalario = salarioAtual * 1.15; // 100% + 15%)
+
+        // 5. Exibe os resultados
+        document.write("<h2>--- Cálculo de Reajuste ---</h2>");
+        document.write("<p>Salário Atual: R$ " + salarioAtual.toFixed(2) + "</p>");
+        document.write("<p>Valor do Aumento (15%): R$ " + valorAumento.toFixed(2) + "</p>");
+        document.write("<p><b>Novo Salário (com aumento): R$ " + novoSalario.toFixed(2) + "</b></p>");
+
+    </script>
+</body>
+</html>

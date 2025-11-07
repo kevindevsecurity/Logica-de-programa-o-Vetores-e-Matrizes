@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 18 - Maior Número</title>
+</head>
+<body>
+    <h1>Exercício 18: Maior de Dois Números</h1>
+
+    <script>
+        // 18) Crie um programa que leia dois números inteiros e exiba o 
+        // maior deles.
+
+        // 1. Solicita os números
+        let num1Str = prompt("Digite o primeiro número inteiro:");
+        let num2Str = prompt("Digite o segundo número inteiro:");
+
+        // 2. Converte para inteiros
+        let num1 = parseInt(num1Str);
+        let num2 = parseInt(num2Str);
+
+        // 3. Exibe os números informados
+        document.write("<h2>--- Resultado ---</h2>");
+        document.write("<p>Números informados: " + num1 + " e " + num2 + "</p>");
+
+        // 4. Compara os números
+        if (num1 > num2) {
+            document.write("<p>O maior número é: <b>" + num1 + "</b></p>");
+        } else if (num2 > num1) {
+            document.write("<p>O maior número é: <b>" + num2 + "</b></p>");
+        } else {
+            // Se nenhum é maior, eles são iguais
+            document.write("<p>Os números são <b>iguais</b>.</p>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 19 - Média de Aprovação</title>
+</head>
+<body>
+    <h1>Exercício 19: Situação do Aluno (Média 7)</h1>
+
+    <script>
+        // 19) Faça um programa que receba três notas de um aluno e exiba 
+        // se ele foi aprovado ou reprovado. A média para aprovação é 7.
+
+        // 1. Solicita as três notas
+        let nota1Str = prompt("Digite a primeira nota:");
+        let nota2Str = prompt("Digite a segunda nota:");
+        let nota3Str = prompt("Digite a terceira nota:");
+
+        // 2. Converte para números decimais
+        let nota1 = parseFloat(nota1Str);
+        let nota2 = parseFloat(nota2Str);
+        let nota3 = parseFloat(nota3Str);
+
+        // 3. Calcula a média aritmética
+        let media = (nota1 + nota2 + nota3) / 3;
+
+        // 4. Exibe as notas e a média
+        document.write("<h2>--- Situação do Aluno ---</h2>");
+        document.write("<p>Notas: " + nota1.toFixed(1) + ", " + nota2.toFixed(1) + ", " + nota3.toFixed(1) + "</p>");
+        document.write("<p>Média: <b>" + media.toFixed(2) + "</b></p>");
+
+        // 5. Verifica se foi aprovado
+        if (media >= 7) {
+            document.write("<p style='color: green; font-weight: bold;'>Situação: APROVADO</p>");
+        } else {
+            document.write("<p style='color: red; font-weight: bold;'>Situação: REPROVADO</p>");
+        }
+    </script>
+</body>
+</html>

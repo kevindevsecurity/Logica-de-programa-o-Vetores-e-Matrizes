@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 16 - Positivo, Negativo ou Zero</title>
+</head>
+<body>
+    <h1>Exercício 16: Positivo, Negativo ou Zero</h1>
+
+    <script>
+        // 16) Faça um programa que verifique se um número é positivo, 
+        // negativo ou zero.
+
+        // 1. Solicita o número
+        let numStr = prompt("Digite um número (pode ser positivo, negativo ou zero):");
+
+        // 2. Converte para número decimal (pode ser int ou float)
+        let numero = parseFloat(numStr);
+
+        // 3. Exibe o título do resultado
+        document.write("<h2>--- Resultado ---</h2>");
+        document.write("<p>Número informado: " + numero + "</p>");
+
+        // 4. Verifica a condição
+        if (numero > 0) {
+            document.write("<p>O número é <b>POSITIVO</b>.</p>");
+        } else if (numero < 0) {
+            document.write("<p>O número é <b>NEGATIVO</b>.</p>");
+        } else {
+            // Se não é maior nem menor, só pode ser 0
+            document.write("<p>O número é <b>ZERO</b>.</p>");
+        }
+    </script>
+</body>
+</html>

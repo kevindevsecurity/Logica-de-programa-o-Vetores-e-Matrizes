@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 - Salário Líquido</title>
+</head>
+<body>
+    <h1>Exercício 7: Salário Líquido (Comissão 5%)</h1>
+
+    <script>
+        // 7) Faça um programa que receba o salário base de um funcionário 
+        // e calcule o seu salário líquido, considerando que o funcionário 
+        // recebe 5% de comissão sobre o salário base.
+
+        // 1. Solicita o salário base
+        let salarioBaseStr = prompt("Digite o salário base do funcionário:");
+
+        // 2. Converte para número decimal
+        let salarioBase = parseFloat(salarioBaseStr);
+
+        // 3. Calcula a comissão (5% = 0.05)
+        let comissao = salarioBase * 0.05;
+
+        // 4. Calcula o salário líquido (base + comissão)
+        let salarioLiquido = salarioBase + comissao;
+
+        // 5. Exibe os resultados
+        document.write("<h2>--- Holerite ---</h2>");
+        document.write("<p>Salário Base: R$ " + salarioBase.toFixed(2) + "</p>");
+        document.write("<p>Comissão (5%): R$ " + comissao.toFixed(2) + "</p>");
+        document.write("<p><b>Salário Líquido: R$ " + salarioLiquido.toFixed(2) + "</b></p>");
+    </script>
+</body>
+</html>

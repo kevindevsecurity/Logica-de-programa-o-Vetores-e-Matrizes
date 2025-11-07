@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 26 - Preço por Código</title>
+</head>
+<body>
+    <h1>Exercício 26: Venda de Produtos por Código</h1>
+
+    <script>
+        // 26) Escreva um programa que leia o código de um produto e a 
+        // quantidade comprada, e exiba o valor total a ser pago. Considere 
+        // que cada produto tem um preço diferente.
+        
+        // (Preços definidos para o exemplo)
+        // Cód 101: R$ 5,00
+        // Cód 102: R$ 8,50
+        // Cód 103: R$ 12,00
+
+        // 1. Solicita o código e a quantidade
+        let codigoStr = prompt("Digite o código do produto (Ex: 101, 102, 103):");
+        let qtdStr = prompt("Digite a quantidade desejada:");
+
+        // 2. Converte as entradas (código e qtd são inteiros)
+        let codigo = parseInt(codigoStr);
+        let quantidade = parseInt(qtdStr);
+
+        let precoUnitario = 0;
+        let nomeProduto = "";
+        let valorTotal = 0;
+
+        // 3. Verifica o código e define o preço e o nome
+        switch (codigo) {
+            case 101:
+                precoUnitario = 5.00;
+                nomeProduto = "Produto A";
+                break;
+            case 102:
+                precoUnitario = 8.50;
+                nomeProduto = "Produto B";
+                break;
+            case 103:
+                precoUnitario = 12.00;
+                nomeProduto = "Produto C";
+                break;
+            default:
+                nomeProduto = "Código inválido";
+        }
+
+        // 4. Exibe os resultados
+        document.write("<h2>--- Resumo da Compra ---</h2>");
+        document.write("<p>Código Informado: " + codigo + "</p>");
+
+        // 5. Calcula o total apenas se o código for válido
+        if (nomeProduto === "Código inválido") {
+            document.write("<p style='color: red;'><b>Produto não encontrado.</b></p>");
+        } else {
+            valorTotal = precoUnitario * quantidade;
+            document.write("<p>Produto: " + nomeProduto + "</p>");
+            document.write("<p>Preço Unitário: R$ " + precoUnitario.toFixed(2) + "</p>");
+            document.write("<p>Quantidade: " + quantidade + "</p>");
+            document.write("<p><b>Valor Total a Pagar: R$ " + valorTotal.toFixed(2) + "</b></p>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11 - Média Aritmética</title>
+</head>
+<body>
+    <h1>Exercício 11: Média Aritmética de Três Números</h1>
+
+    <script>
+        // 11) Escreva um programa que calcule a média aritmética entre três 
+        // números reais inseridos pelo usuário.
+
+        // 1. Solicita os três números
+        let num1Str = prompt("Digite o primeiro número:");
+        let num2Str = prompt("Digite o segundo número:");
+        let num3Str = prompt("Digite o terceiro número:");
+
+        // 2. Converte as entradas para números decimais (float)
+        let num1 = parseFloat(num1Str);
+        let num2 = parseFloat(num2Str);
+        let num3 = parseFloat(num3Str);
+
+        // 3. Calcula a média aritmética (soma dos valores / quantidade de valores)
+        let media = (num1 + num2 + num3) / 3;
+
+        // 4. Exibe os resultados
+        document.write("<h2>--- Resultados ---</h2>");
+        document.write("<p>Números informados: " + num1 + ", " + num2 + ", " + num3 + "</p>");
+        document.write("<p><b>Média Aritmética: " + media.toFixed(2) + "</b></p>");
+    </script>
+</body>
+</html>

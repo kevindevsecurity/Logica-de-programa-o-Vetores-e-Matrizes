@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 21 - Maioridade</title>
+</head>
+<body>
+    <h1>Exercício 21: Contagem de Maiores e Menores de Idade</h1>
+
+    <script>
+        // 21) Crie um programa que leia a idade de um grupo de pessoas e 
+        // exiba quantas são menores de idade e quantas são maiores de 
+        // idade.
+
+        // 1. Inicializa os contadores
+        let maioresDeIdade = 0;
+        let menoresDeIdade = 0;
+
+        // 2. Cria um loop infinito que só será quebrado com a condição
+        while (true) {
+            let idadeStr = prompt("Digite uma idade (ou 0 para parar):");
+            let idade = parseInt(idadeStr);
+
+            // 3. Condição de parada: se a idade for 0 ou negativa, encerra o loop
+            if (idade <= 0 || isNaN(idade)) {
+                break; // 'break' sai do loop
+            }
+
+            // 4. Verifica se é maior ou menor de idade e incrementa o contador
+            if (idade >= 18) {
+                maioresDeIdade++; // '++' é o mesmo que 'maioresDeIdade = maioresDeIdade + 1'
+            } else {
+                menoresDeIdade++;
+            }
+        }
+
+        // 5. Exibe os resultados finais
+        document.write("<h2>--- Contagem Final ---</h2>");
+        document.write("<p>Total de pessoas MAIORES de idade (18+): <b>" + maioresDeIdade + "</b></p>");
+        document.write("<p>Total de pessoas MENORES de idade: <b>" + menoresDeIdade + "</b></p>");
+    </script>
+</body>
+</html>

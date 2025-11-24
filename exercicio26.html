@@ -9,28 +9,15 @@
     <h1>Exercício 26: Venda de Produtos por Código</h1>
 
     <script>
-        // 26) Escreva um programa que leia o código de um produto e a 
-        // quantidade comprada, e exiba o valor total a ser pago. Considere 
-        // que cada produto tem um preço diferente.
-        
-        // (Preços definidos para o exemplo)
-        // Cód 101: R$ 5,00
-        // Cód 102: R$ 8,50
-        // Cód 103: R$ 12,00
 
-        // 1. Solicita o código e a quantidade
         let codigoStr = prompt("Digite o código do produto (Ex: 101, 102, 103):");
         let qtdStr = prompt("Digite a quantidade desejada:");
-
-        // 2. Converte as entradas (código e qtd são inteiros)
         let codigo = parseInt(codigoStr);
         let quantidade = parseInt(qtdStr);
-
         let precoUnitario = 0;
         let nomeProduto = "";
         let valorTotal = 0;
 
-        // 3. Verifica o código e define o preço e o nome
         switch (codigo) {
             case 101:
                 precoUnitario = 5.00;
@@ -48,11 +35,9 @@
                 nomeProduto = "Código inválido";
         }
 
-        // 4. Exibe os resultados
-        document.write("<h2>--- Resumo da Compra ---</h2>");
+        document.write("<h2> Resumo da Compra </h2>");
         document.write("<p>Código Informado: " + codigo + "</p>");
 
-        // 5. Calcula o total apenas se o código for válido
         if (nomeProduto === "Código inválido") {
             document.write("<p style='color: red;'><b>Produto não encontrado.</b></p>");
         } else {

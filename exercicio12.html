@@ -9,24 +9,14 @@
     <h1>Exercício 12: Cálculo de IMC</h1>
 
     <script>
-        // 12) Crie um programa que leia o peso e a altura de uma pessoa e 
-        // exiba o seu Índice de Massa Corporal (IMC).
-        // Fórmula: IMC = Peso / (Altura * Altura)
 
-        // 1. Solicita o peso e a altura
-        // Ex: Peso 70.5 (kg) | Altura 1.75 (metros)
         let pesoStr = prompt("Digite seu peso (em kg, ex: 70.5):");
         let alturaStr = prompt("Digite sua altura (em metros, ex: 1.75):");
-
-        // 2. Converte para números decimais
         let peso = parseFloat(pesoStr);
         let altura = parseFloat(alturaStr);
-
-        // 3. Calcula o IMC
         let imc = peso / (altura * altura);
 
-        // 4. Exibe os resultados
-        document.write("<h2>--- Resultado do IMC ---</h2>");
+        document.write("<h2> Resultado do IMC </h2>");
         document.write("<p>Peso informado: " + peso.toFixed(2) + " kg</p>");
         document.write("<p>Altura informada: " + altura.toFixed(2) + " m</p>");
         document.write("<p><b>Seu IMC é: " + imc.toFixed(2) + "</b></p>");

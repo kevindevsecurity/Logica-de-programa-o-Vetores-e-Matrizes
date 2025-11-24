@@ -9,19 +9,12 @@
     <h1>Exercício 33: Saudação por Turno</h1>
 
     <script>
-        // 33) Crie um programa que leia o nome e o turno (M ou V) de um 
-        // aluno e exiba uma mensagem de saudação de acordo com o turno. 
-        // Matutino: "Bom dia, aluno", Vespertino: "Boa tarde, aluno".
 
-        // 1. Solicita o nome e o turno
         let nome = prompt("Digite o nome do aluno:");
         let turno = prompt("Digite o turno (M para Matutino, V para Vespertino):");
-
-        // 2. Normaliza o turno para letra maiúscula
         let turnoNormalizado = turno.toUpperCase();
         let saudacao = "";
 
-        // 3. Verifica o turno e define a saudação
         if (turnoNormalizado === "M") {
             saudacao = "Bom dia, " + nome + "!";
         } else if (turnoNormalizado === "V") {
@@ -30,8 +23,7 @@
             saudacao = "Turno inválido. Por favor, use 'M' ou 'V'.";
         }
 
-        // 4. Exibe o resultado
-        document.write("<h2>--- Saudação ---</h2>");
+        document.write("<h2> Saudação </h2>");
         document.write("<p>" + saudacao + "</p>");
 
     </script>

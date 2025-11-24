@@ -9,31 +9,22 @@
     <h1>Exercício 29: Situação do Aluno (Recuperação)</h1>
 
     <script>
-        // 29) Escreva um programa que leia o nome e a nota de um aluno e 
-        // exiba sua situação na disciplina. Se a nota for maior ou igual a 7, o 
-        // aluno está aprovado. Caso contrário, está em recuperação.
 
-        // 1. Solicita o nome e a nota
         let nome = prompt("Digite o nome do aluno:");
         let notaStr = prompt("Digite a nota final (0 a 10):");
-
-        // 2. Converte a nota para decimal
         let nota = parseFloat(notaStr);
         let situacao = "";
 
-        // 3. Verifica a situação (>= 7 Aprovado)
         if (nota >= 7) {
             situacao = "APROVADO(A)";
         } else {
             situacao = "EM RECUPERAÇÃO";
         }
 
-        // 4. Exibe o resultado
-        document.write("<h2>--- Situação do Aluno ---</h2>");
+        document.write("<h2> Situação do Aluno </h2>");
         document.write("<p>Aluno(a): " + nome + "</p>");
         document.write("<p>Nota Final: " + nota.toFixed(1) + "</p>");
 
-        // 5. Muda a cor da situação dependendo do resultado
         if (nota >= 7) {
             document.write("<p style='color: green;'><b>Situação: " + situacao + "</b></p>");
         } else {

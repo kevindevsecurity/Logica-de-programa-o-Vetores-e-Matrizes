@@ -9,22 +9,16 @@
     <h1>Exercício 3: Área do Triângulo</h1>
 
     <script>
-        // 3) Crie um programa que leia a base e a altura de um triângulo e 
-        // calcule sua área.
 
-        // 1. Solicita a base e a altura
         let baseStr = prompt("Digite o valor da base do triângulo:");
         let alturaStr = prompt("Digite o valor da altura do triângulo:");
 
-        // 2. Converte as entradas para números decimais
         let base = parseFloat(baseStr);
         let altura = parseFloat(alturaStr);
 
-        // 3. Calcula a área (Fórmula: (base * altura) / 2)
         let areaTriangulo = (base * altura) / 2;
 
-        // 4. Exibe os resultados
-        document.write("<h2>--- Resultados ---</h2>");
+        document.write("<h2> Resultados </h2>");
         document.write("<p>Base informada: " + base + "</p>");
         document.write("<p>Altura informada: " + altura + "</p>");
         document.write("<p><b>Área do triângulo: " + areaTriangulo.toFixed(2) + "</b></p>");

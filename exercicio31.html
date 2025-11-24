@@ -9,22 +9,14 @@
     <h1>Exercício 31: Quantidade de Salários-Mínimos</h1>
 
     <script>
-        // 31) Faça um programa que leia o valor do salário-mínimo e o salário 
-        // de um funcionário, e exiba quantos salários-mínimos ele recebe.
 
-        // 1. Solicita os valores
         let salarioMinimoStr = prompt("Digite o valor atual do salário-mínimo (Ex: 1412.00):");
         let salarioFuncionarioStr = prompt("Digite o salário do funcionário:");
-
-        // 2. Converte para números decimais
         let salarioMinimo = parseFloat(salarioMinimoStr);
         let salarioFuncionario = parseFloat(salarioFuncionarioStr);
-
-        // 3. Calcula a proporção
         let quantidadeSalarios = salarioFuncionario / salarioMinimo;
 
-        // 4. Exibe os resultados
-        document.write("<h2>--- Análise Salarial ---</h2>");
+        document.write("<h2> Análise Salarial </h2>");
         document.write("<p>Salário-Mínimo: R$ " + salarioMinimo.toFixed(2) + "</p>");
         document.write("<p>Salário do Funcionário: R$ " + salarioFuncionario.toFixed(2) + "</p>");
         document.write("<p><b>O funcionário recebe o equivalente a " + quantidadeSalarios.toFixed(2) + " salários-mínimos.</b></p>");

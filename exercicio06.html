@@ -9,22 +9,14 @@
     <h1>Exercício 6: Par ou Ímpar</h1>
 
     <script>
-        // 6) Crie um programa que leia um número inteiro e exiba se ele é par 
-        // ou ímpar.
 
-        // 1. Solicita o número
         let numeroStr = prompt("Digite um número inteiro:");
 
-        // 2. Converte para inteiro
         let numero = parseInt(numeroStr);
 
-        // 3. Exibe o resultado inicial
-        document.write("<h2>--- Resultado ---</h2>");
+        document.write("<h2> Resultado </h2>");
         document.write("<p>Número informado: " + numero + "</p>");
 
-        // 4. Verifica se é par ou ímpar
-        // O operador % (módulo) retorna o resto da divisão.
-        // Se o resto da divisão por 2 for 0, o número é par.
         if (numero % 2 === 0) {
             document.write("<p>O número <b>é PAR</b>.</p>");
         } else {

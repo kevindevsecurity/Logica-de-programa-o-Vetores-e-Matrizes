@@ -9,22 +9,13 @@
     <h1>Exercício 17: Classificação de Faixa Etária</h1>
 
     <script>
-        // 17) Escreva um programa que leia a idade de uma pessoa e exiba 
-        // uma mensagem indicando se ela é criança, adolescente, adulto ou 
-        // idoso.
-        // (Critério comum: 0-11 Criança, 12-17 Adolescente, 18-59 Adulto, 60+ Idoso)
 
-        // 1. Solicita a idade
         let idadeStr = prompt("Digite a idade da pessoa:");
-
-        // 2. Converte para inteiro
         let idade = parseInt(idadeStr);
 
-        // 3. Exibe o título e a idade
-        document.write("<h2>--- Classificação ---</h2>");
+        document.write("<h2> Classificação </h2>");
         document.write("<p>Idade informada: " + idade + " anos</p>");
 
-        // 4. Verifica as faixas etárias, da menor para a maior
         if (idade >= 0 && idade <= 11) {
             document.write("<p>Classificação: <b>Criança</b></p>");
         } else if (idade >= 12 && idade <= 17) {
@@ -34,7 +25,6 @@
         } else if (idade >= 60) {
             document.write("<p>Classificação: <b>Idoso</b></p>");
         } else {
-            // Caso o usuário digite um número negativo
             document.write("<p><b>Idade inválida.</b></p>");
         }
     </script>

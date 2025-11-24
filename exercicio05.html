@@ -9,31 +9,23 @@
     <h1>Exercício 5: Cálculo de Desconto (10%)</h1>
 
     <script>
-        // 5) Escreva um programa que leia o preço de um produto e a 
-        // quantidade comprada, e calcule o valor total a ser pago com 
-        // desconto de 10% se a quantidade for maior que 10 unidades.
 
-        // 1. Solicita o preço e a quantidade
         let precoStr = prompt("Digite o preço unitário do produto:");
         let qtdStr = prompt("Digite a quantidade comprada:");
 
-        // 2. Converte as entradas (preço é decimal, quantidade é inteira)
         let precoProduto = parseFloat(precoStr);
-        let quantidade = parseInt(qtdStr); // parseInt pois quantidade é um número inteiro
+        let quantidade = parseInt(qtdStr); 
 
-        // 3. Calcula o valor total inicial
         let valorTotal = precoProduto * quantidade;
-        let valorFinal = valorTotal; // Valor final começa igual ao total
+        let valorFinal = valorTotal; 
         let descontoAplicado = 0;
 
-        // 4. Verifica a condição para o desconto
         if (quantidade > 10) {
-            descontoAplicado = valorTotal * 0.10; // 0.10 = 10%
+            descontoAplicado = valorTotal * 0.10; 
             valorFinal = valorTotal - descontoAplicado;
         }
 
-        // 5. Exibe os resultados
-        document.write("<h2>--- Nota Fiscal ---</h2>");
+        document.write("<h2> Nota Fiscal </h2>");
         document.write("<p>Preço Unitário: R$ " + precoProduto.toFixed(2) + "</p>");
         document.write("<p>Quantidade: " + quantidade + " unidades</p>");
         document.write("<p>Valor Total Bruto: R$ " + valorTotal.toFixed(2) + "</p>");

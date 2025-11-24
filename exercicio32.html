@@ -9,22 +9,11 @@
     <h1>Exercício 32: Conceito da Nota</h1>
 
     <script>
-        // 32) Escreva um programa que leia a nota de um aluno em uma 
-        // prova e exiba a sua conceituação conforme a tabela de notas.
-        // (Tabela de Exemplo)
-        // 0.0 a 4.9: Conceito D
-        // 5.0 a 6.9: Conceito C
-        // 7.0 a 8.9: Conceito B
-        // 9.0 a 10.0: Conceito A
 
-        // 1. Solicita a nota
         let notaStr = prompt("Digite a nota do aluno (0 a 10):");
-
-        // 2. Converte para número decimal
         let nota = parseFloat(notaStr);
         let conceito = "";
 
-        // 3. Verifica a faixa da nota para definir o conceito
         if (nota >= 0 && nota <= 4.9) {
             conceito = "D";
         } else if (nota >= 5.0 && nota <= 6.9) {
@@ -37,8 +26,7 @@
             conceito = "Nota inválida";
         }
 
-        // 4. Exibe os resultados
-        document.write("<h2>--- Conceito da Prova ---</h2>");
+        document.write("<h2> Conceito da Prova </h2>");
         document.write("<p>Nota: " + nota.toFixed(1) + "</p>");
         document.write("<p><b>Conceito: " + conceito + "</b></p>");
     </script>

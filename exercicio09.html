@@ -9,33 +9,19 @@
     <h1>Exercício 9: Montante da Poupança (12 Meses)</h1>
 
     <script>
-        // 9) Crie um programa que leia o valor do depósito mensal em uma 
-        // poupança e a taxa de juros mensal, e calcule o montante após 12 
-        // meses. (Considerando juros compostos aplicados ao saldo total)
 
-        // 1. Solicita os valores
         let depositoStr = prompt("Digite o valor do depósito mensal (Ex: 500):");
         let taxaStr = prompt("Digite a taxa de juros mensal (Ex: 0.5 para 0,5%):");
-
-        // 2. Converte para números decimais
         let depositoMensal = parseFloat(depositoStr);
-        // Converte a taxa de porcentagem para decimal (Ex: 0.5% -> 0.005)
         let taxaJurosDecimal = parseFloat(taxaStr) / 100;
-
-        // 3. Calcula o montante mês a mês
         let montante = 0;
 
-        // Usamos um loop 'for' para simular os 12 meses
         for (let mes = 1; mes <= 12; mes++) {
-            // Adiciona o depósito do mês
             montante = montante + depositoMensal;
-            
-            // Aplica os juros sobre o saldo total
             montante = montante * (1 + taxaJurosDecimal);
         }
 
-        // 4. Exibe os resultados
-        document.write("<h2>--- Resultado Após 12 Meses ---</h2>");
+        document.write("<h2> Resultado Após 12 Meses </h2>");
         document.write("<p>Depósito Mensal: R$ " + depositoMensal.toFixed(2) + "</p>");
         document.write("<p>Taxa de Juros: " + taxaStr + "% ao mês</p>");
         document.write("<p><b>Montante Final: R$ " + montante.toFixed(2) + "</b></p>");

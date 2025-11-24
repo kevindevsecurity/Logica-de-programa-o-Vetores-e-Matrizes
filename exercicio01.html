@@ -9,31 +9,21 @@
     <h1>Calculadora de 4 Operações</h1>
 
     <script>
-        //Faça um programa que solicite dois números inteiros e exiba a soma, subtração, multiplicação e divisão entre eles.
 
-        // 1. Solicita os dois números ao usuário
         let numero1_str = prompt("Digite o primeiro número inteiro:");
         let numero2_str = prompt("Digite o segundo número inteiro:");
 
-        // 2. Converte as entradas (que são texto) para números inteiros
         let numero1 = parseInt(numero1_str);
         let numero2 = parseInt(numero2_str);
         
-        // 3. Exibe os resultados na tela usando document.write()
-        // e realiza os cálculos diretamente na exibição
-        
-        document.write("<h2>--- Resultados ---</h2>");
+        document.write("<h2> Resultados </h2>");
 
-        // Soma
         document.write("<p>Soma: " + numero1 + " + " + numero2 + " = " + (numero1 + numero2) + "</p>");
         
-        // Subtração
         document.write("<p>Subtração: " + numero1 + " - " + numero2 + " = " + (numero1 - numero2) + "</p>");
         
-        // Multiplicação
         document.write("<p>Multiplicação: " + numero1 + " * " + numero2 + " = " + (numero1 * numero2) + "</p>");
 
-        // 4. Verifica a divisão para evitar o erro de divisão por zero
         if (numero2 !== 0) {
             let divisao = numero1 / numero2;
             document.write("<p>Divisão: " + numero1 + " / " + numero2 + " = " + divisao + "</p>");
